@@ -1,7 +1,7 @@
 <div class = "container" style="padding-top: 5vh; ">
   <div class="container-fluid">
     <div class="mx-auto" style="padding-top: 5vh; padding-bottom: 20px;">
-    <h2>Hey there! You caught us before we are ready.</h2>
+    <h2>Hello there! You caught us before we are ready.</h2>
     <h5 style="color: #495057" class="mt-4">Fluorite is very close to being ready. We're working hard to finish it up. If you would like us to remind you when we launch on <%= @store %>, just put your email below:</h5>
     
     <form>
