@@ -19,6 +19,10 @@ defmodule FluoriteWeb.Router do
     get "/", PageController, :index
     get "/pricing", PageController, :pricing
     get "/email", PageController, :email
+    post "/email", PageController, :create
+    get "/email/success", PageController, :email_success
+    get "/success", PageController, :success
+    get "/canceled", PageController, :fail
   end
 
   # Other scopes may use custom stacks.

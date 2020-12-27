@@ -12,7 +12,7 @@
     <title>Fluorite</title>
   </head>
   <body style="background-color: #f6f6f6; padding-bottom: 40px;">
-    <div style="background-color: #9400D3;">
+    <div style="background-color: black;">
       <a href = "/" style="text-decoration: none;">
         <h1 class="mx-auto  text-center pt-5 pb-5" style="font-weight:bold; color: white; margin-bottom: 0">Fluorite</h1>
       </a>

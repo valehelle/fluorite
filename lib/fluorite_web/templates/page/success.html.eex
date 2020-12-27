@@ -1,0 +1,8 @@
+<div class = "container" style="padding-top: 5vh; ">
+  <div class="container-fluid">
+    <div class="mx-auto text-lg-center" style="padding-top: 5vh; padding-bottom: 20px;">
+    <h2>Thank you for your pre-order!</h2>
+    <h4 class="mt-5">We will email you with a promo code when we launch. You can use the promo code to purchase without charge.</h4>
+    </div>
+  </div>
+</div>

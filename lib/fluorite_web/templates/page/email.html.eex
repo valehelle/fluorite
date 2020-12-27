@@ -2,16 +2,77 @@
   <div class="container-fluid">
     <div class="mx-auto" style="padding-top: 5vh; padding-bottom: 20px;">
     <h2>Hello there! You caught us before we are ready.</h2>
-    <h5 style="color: #495057" class="mt-4">Fluorite is very close to being ready. We're working hard to finish it up. If you would like us to remind you when we launch on <%= @store %>, just put your email below:</h5>
+    <h5 style="color: #495057" class="mt-4">Fluorite is very close to being ready and we're working hard to finish it up. If you would like us to remind you when we launch, just put your email below:</h5>
     
-    <form>
-      <div class="mb-3 mt-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <%= form_for @changeset, Routes.page_path(@conn, :create), fn f -> %>
+      <div style="mb-3 mt-3">
+          <label class="form-label">
+          Email address
+          </label>
+          <%= text_input f, :email, placeholder: "Email", class: "form-control", type: "email" %>
+          <%= error_tag f, :email %>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+
+      <%= submit "Submit", class: "btn btn-dark mt-3"%>
+    <% end %>
+    
+    <h5 style="color: #495057; margin-top: 50px; margin-bottom: 20px;">We are also accepting 10 pre-order for Fluorite. Save $3 by pre-ordering it now!</h5>
+
+
+
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+  style="padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+  id="checkout-button-price_1I2CDoEbVoWoAhSIivRF38kq"
+  role="link"
+  type="button"
+  class="btn btn-dark"
+>
+  Pre-Order $1.99
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_test_51I2BsqEbVoWoAhSIAiquyZ9OzY411UQvM2mJbLMSJ4JLJRFSi14ukVeNESuoiTvoGOOldRMPTWzotesmoBkNfW5w00lLH9rjGa');
+
+  var checkoutButton = document.getElementById('checkout-button-price_1I2CDoEbVoWoAhSIivRF38kq');
+  checkoutButton.addEventListener('click', function () {
+    /*
+     * When the customer clicks on the button, redirect
+     * them to Checkout.
+     */
+    stripe.redirectToCheckout({
+      lineItems: [{price: 'price_1I2CDoEbVoWoAhSIivRF38kq', quantity: 1}],
+      mode: 'payment',
+      /*
+       * Do not rely on the redirect to the successUrl for fulfilling
+       * purchases, customers may not always reach the success_url after
+       * a successful payment.
+       * Instead use one of the strategies described in
+       * https://stripe.com/docs/payments/checkout/fulfill-orders
+       */
+      successUrl: 'https://infinite-bastion-21639.herokuapp.com/success',
+      cancelUrl: 'https://infinite-bastion-21639.herokuapp.com/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        /*
+         * If `redirectToCheckout` fails due to a browser or network
+         * error, display the localized error message to your customer.
+         */
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+
     </div>
   </div>
 </div>
