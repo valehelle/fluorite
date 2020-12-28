@@ -56,8 +56,8 @@
        * Instead use one of the strategies described in
        * https://stripe.com/docs/payments/checkout/fulfill-orders
        */
-      successUrl: 'https://infinite-bastion-21639.herokuapp.com/success',
-      cancelUrl: 'https://infinite-bastion-21639.herokuapp.com/canceled',
+      successUrl: 'https://www.getfluorite.com/success',
+      cancelUrl: 'https://www.getfluorite.com/canceled',
     })
     .then(function (result) {
       if (result.error) {
