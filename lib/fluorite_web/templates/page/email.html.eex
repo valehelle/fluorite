@@ -38,16 +38,16 @@
 
 <script>
 (function() {
-  var stripe = Stripe('pk_test_51I2BsqEbVoWoAhSIAiquyZ9OzY411UQvM2mJbLMSJ4JLJRFSi14ukVeNESuoiTvoGOOldRMPTWzotesmoBkNfW5w00lLH9rjGa');
+  var stripe = Stripe('pk_live_51I2BsqEbVoWoAhSIhfzCCdRHpLFCZDRj0NxkjAbvDVHIFQ4pgiopgcSvsBjNoziZ6ngQkrrgdGkbSZtjdFI29fOY00yIqDa38K');
 
-  var checkoutButton = document.getElementById('checkout-button-price_1I2CDoEbVoWoAhSIivRF38kq');
+  var checkoutButton = document.getElementById('checkout-button-price_1I2BzSEbVoWoAhSI9bKv2opc');
   checkoutButton.addEventListener('click', function () {
     /*
      * When the customer clicks on the button, redirect
      * them to Checkout.
      */
     stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1I2CDoEbVoWoAhSIivRF38kq', quantity: 1}],
+      lineItems: [{price: 'price_1I2BzSEbVoWoAhSI9bKv2opc', quantity: 1}],
       mode: 'payment',
       /*
        * Do not rely on the redirect to the successUrl for fulfilling
