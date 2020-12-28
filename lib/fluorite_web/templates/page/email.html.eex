@@ -26,7 +26,7 @@
 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
 <button
   style="padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-price_1I2CDoEbVoWoAhSIivRF38kq"
+  id="checkout-button-price_1I2BzSEbVoWoAhSI9bKv2opc"
   role="link"
   type="button"
   class="btn btn-dark"
