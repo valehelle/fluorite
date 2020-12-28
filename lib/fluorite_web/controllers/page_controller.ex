@@ -17,8 +17,7 @@ defmodule FluoriteWeb.PageController do
   end
 
   def email_success(conn, _params) do
-    changeset = User.changeset(%User{}, %{})
-    render(conn, "email_success.html", changeset: changeset)
+    render(conn, "email_success.html")
   end
 
   def create(conn, %{"user" => user_params}) do
