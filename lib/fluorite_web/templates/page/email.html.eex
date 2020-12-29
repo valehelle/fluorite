@@ -16,7 +16,7 @@
       <%= submit "Submit", class: "btn btn-dark mt-3"%>
     <% end %>
     
-    <h5 style="color: #495057; margin-top: 50px; margin-bottom: 20px;">We are also accepting 10 pre-order for Fluorite. Save $3 by pre-ordering it now!</h5>
+    <h5 style="color: #495057; margin-top: 50px; margin-bottom: 20px;">We are also accepting 10 pre-order for Fluorite. 8 pre-order left. Save $3 by pre-ordering it now!</h5>
 
 
 

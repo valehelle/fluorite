@@ -26,9 +26,18 @@
         <h1 class="mx-auto  text-center pt-5 pb-5" style="font-weight:bold; color: white; margin-bottom: 0">Fluorite</h1>
       </a>
     </div>
-    <main role="main">
+    <main role="main" style="min-height: 80vh;">
       <%= @inner_content %>
     </main>
+    <footer>
+      <div class = "container mt-5">
+        <div class="container-fluid">
+          <div class="mx-auto text-center">
+            <h6>&#169; 2020 Fluorite. All rights reserved.</h6>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
