@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="mx-auto text-center" style="padding-top: 10vh; padding-bottom: 20px;">
     <h2>One time purchase.</h2>
-    <h1 style="font-size:80px;">$4.99</h1>
+    <h1 style="font-size:80px;">$1.99</h1>
     <div class="mt-3 mx-auto">
       <a href="/email?store=android" style="text-decoration: none;">
         <img style="height: 40px" src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" class="img-fluid" alt="...">

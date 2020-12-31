@@ -1,8 +1,67 @@
 <div class = "container" style="padding-top: 5vh; ">
   <div class="container-fluid">
     <div class="mx-auto text-lg-center" style="padding-top: 10vh; padding-bottom: 20px;">
-    <h2>Thank you for your email.</h2>
-    <h4 class="mt-3">We will notify you once we launch!</h4>
+    <h2 class="text-lg-center" >Thank you for your email.</h2>
+    <h4 class="mt-3 text-lg-center">We will notify you once we launch!</h4>
+
+    <h5 class="text-lg-center" style="color: #495057; margin-top: 150px; margin-bottom: 20px;">We are also accepting 10 pre-order for Fluorite. Save $1 by pre-ordering it now!</h5>
+    <h6  style="color: #495057;">4 pre-order left.</h6>
+
+
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+    <button
+      style="padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+      id="checkout-button-price_1I4Hr3EbVoWoAhSIRijtKvw1"
+      role="link"
+      type="button"
+      class="btn btn-dark"
+    >
+      Pre-Order $0.99
+    </button>
+
+
+    <div id="error-message"></div>
+
+    <script>
+(function() {
+  var stripe = Stripe('pk_live_51I2BsqEbVoWoAhSIhfzCCdRHpLFCZDRj0NxkjAbvDVHIFQ4pgiopgcSvsBjNoziZ6ngQkrrgdGkbSZtjdFI29fOY00yIqDa38K');
+
+  var checkoutButton = document.getElementById('checkout-button-price_1I4Hr3EbVoWoAhSIRijtKvw1');
+  checkoutButton.addEventListener('click', function () {
+    /*
+     * When the customer clicks on the button, redirect
+     * them to Checkout.
+     */
+    stripe.redirectToCheckout({
+      lineItems: [{price: 'price_1I4Hr3EbVoWoAhSIRijtKvw1', quantity: 1}],
+      mode: 'payment',
+      /*
+       * Do not rely on the redirect to the successUrl for fulfilling
+       * purchases, customers may not always reach the success_url after
+       * a successful payment.
+       * Instead use one of the strategies described in
+       * https://stripe.com/docs/payments/checkout/fulfill-orders
+       */
+      successUrl: 'https://www.getfluorite.com/success',
+      cancelUrl: 'https://www.getfluorite.com/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        /*
+         * If `redirectToCheckout` fails due to a browser or network
+         * error, display the localized error message to your customer.
+         */
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+
     </div>
   </div>
 </div>
