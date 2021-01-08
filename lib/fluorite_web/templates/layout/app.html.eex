@@ -21,7 +21,7 @@
 
     <title>Fluorite</title>
   </head>
-  <body style="background-color: #f6f6f6; padding-bottom: 40px;">
+  <body style="background-color: #f6f6f6;">
     <div style="background-color: black;">
       <a href = "/" style="text-decoration: none;">
         <h1 class="mx-auto  text-center pt-5 pb-5" style="font-weight:bold; color: white; margin-bottom: 0">Fluorite</h1>
@@ -30,10 +30,10 @@
     <main role="main" style="min-height: 80vh;">
       <%= @inner_content %>
     </main>
-    <footer>
-      <div class = "container mt-5">
+    <footer style="background-color: white;">
+      <div class = "container">
         <div class="container-fluid">
-          <div class="mx-auto text-center">
+          <div class="mx-auto text-center pt-4 pb-4">
             <h6>&#169; 2020 Fluorite. All rights reserved.</h6>
           </div>
         </div>
