@@ -1,8 +1,14 @@
 <div class = "container" style="padding-top: 5 vh; ">
   <div class="container-fluid">
     <div class="mx-auto text-center" style="padding-top: 10vh; padding-bottom: 20px;">
-    <h1 style="font-size:80px;">RM 30</h1>
+    <h1 style="font-size:80px;">RM 60</h1>
     <h5>per year</h5>
+    <ul class="mt-3 mx-auto" style="width: 300px; text-align: left;">
+      <li>Automated to do list</li>
+      <li>Automated customer reminder</li>
+      <li>Custom text and image for your customer</li>
+      <li>Automated prospect follow up reminder</li>
+    </ul>
     <div class="mt-5 mx-auto">
       <a href="/email?store=android" style="text-decoration: none;">
         <img style="height: 40px" src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" class="img-fluid" alt="...">

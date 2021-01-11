@@ -2,9 +2,9 @@
   <div class="container">
     <div class="container-fluid" style=" color:white;">
       <div class="mx-auto text-lg-center" >
-      <h1 style="font-size:50px;">Your personal helper for building customer relationship</h1>
+      <h1 style="font-size:50px;">Automatic customer reminder and potential customer follow up.</h1>
       <div class="mt-3">
-        <h5>Fluorite is an app to help you nurture your relationship with your customer and prospect.</h5>
+        <h5>With Fluorite, you don't have to keep a notebook to remember your customer birthday or remember when to follow up with potential customer</h5>
         <a type="button" class="btn btn-light mt-3" href="/pricing">See Pricing</a>
         <img style="height: 300px" src=<%= Routes.static_path(@conn, "/images/todo.png") %> class="rounded mx-auto d-block mt-5" alt="Responsive image">
       </div>
@@ -25,7 +25,7 @@
 <div class = "container" style="background-color: #f6f6f6;">
   <div class="container-fluid" style=" color:black;">
     <div class="mx-auto text-lg-center" style="padding-top: 5vh;">
-    <h1 style="font-size:30px;">Automate text and image.</h1>
+    <h1 style="font-size:30px;">Automatically generated custom text and image.</h1>
     <h5 style="color: #495057" class="mt-3">Fluorite will prepare a custom text and image for you to use. All you need to do is copy and paste!</h5>
           <img style="height: 500px" src=<%= Routes.static_path(@conn, "/images/event_day.png") %> class="rounded mx-auto d-block mt-5" alt="Responsive image">
     </div>
